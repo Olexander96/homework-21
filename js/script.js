@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     
-    // Створення анімованого круга рейтингу
+    // Створення анімованого кола рейтингу
     const CIRCLE = document.querySelector('.progress-ring--circle')
     const RADIUS = CIRCLE.r.baseVal.value;
     const CIRCLE_LENGTH = 2 * Math.PI * RADIUS;
@@ -36,7 +36,20 @@ $( document ).ready(function() {
         $(this).removeClass('link_text-active')
     })
 
-    // анімація star rating
+    //анімація star rating - click(спроба зробити через цикл)
+
+    // const STARS = $('.star_icon');
+    // const STARS_ARRAY = $.makeArray(STARS)
+
+    // console.log($.isArray(STARS_ARRAY));
+
+    // STARS_ARRAY.on('mouseover', function() {
+    //     for(let i = 0; i <= ($(this).index()); i++) {
+    //         STARS_ARRAY[i].addClass('star_icon-active');
+    //     }
+    // })  
+
+    //анімація star rating - click
     const STAR_1 = $('.star_icon1');
     const STAR_2 = $('.star_icon2');
     const STAR_3 = $('.star_icon3');
@@ -70,7 +83,7 @@ $( document ).ready(function() {
         STAR_5.addClass('star_icon-activebg');
     }) 
 
-
+    // анімація star rating - hover
     STAR_1.mouseover(function() {
         STAR_1.addClass('star_icon-active')
     }) 
