@@ -38,108 +38,51 @@ $( document ).ready(function() {
 
     //анімація star rating - click(спроба зробити через цикл)
 
-    // const STARS = $('.star_icon');
-    // const STARS_ARRAY = $.makeArray(STARS)
+    const STARS = $('.star_icon');
 
-    // console.log($.isArray(STARS_ARRAY));
-
-    // STARS_ARRAY.on('mouseover', function() {
-    //     for(let i = 0; i <= ($(this).index()); i++) {
-    //         STARS_ARRAY[i].addClass('star_icon-active');
-    //     }
-    // })  
+    STARS.each(function() {
+        $(this).on('click', function() {
+            for(let i = 0; i <= $(this).index(); i++) {
+                STARS.eq(i).addClass('star_icon-active');
+            }
+        })
+    })
+     
 
     //анімація star rating - click
-    const STAR_1 = $('.star_icon1');
-    const STAR_2 = $('.star_icon2');
-    const STAR_3 = $('.star_icon3');
-    const STAR_4 = $('.star_icon4');
-    const STAR_5 = $('.star_icon5');
+    // const STAR_1 = $('.star_icon1');
+    // const STAR_2 = $('.star_icon2');
+    // const STAR_3 = $('.star_icon3');
+    // const STAR_4 = $('.star_icon4');
+    // const STAR_5 = $('.star_icon5');
     
-    STAR_1.on('click', function() {
-        STAR_1.addClass('star_icon-activebg');
-    }) 
+    // STAR_1.on('click', function() {
+    //     STAR_1.addClass('star_icon-activebg');
+    // }) 
 
-    STAR_2.on('click', function() {
-        STAR_1.addClass('star_icon-activebg');
-        STAR_2.addClass('star_icon-activebg');
-    }) 
-    STAR_3.on('click', function() {
-        STAR_1.addClass('star_icon-activebg');
-        STAR_2.addClass('star_icon-activebg');
-        STAR_3.addClass('star_icon-activebg');
-    }) 
-    STAR_4.on('click', function() {
-        STAR_1.addClass('star_icon-activebg');
-        STAR_2.addClass('star_icon-activebg');
-        STAR_3.addClass('star_icon-activebg');
-        STAR_4.addClass('star_icon-activebg');
-    }) 
-    STAR_5.on('click', function() {
-        STAR_1.addClass('star_icon-activebg');
-        STAR_2.addClass('star_icon-activebg');
-        STAR_3.addClass('star_icon-activebg');
-        STAR_4.addClass('star_icon-activebg');
-        STAR_5.addClass('star_icon-activebg');
-    }) 
+    // STAR_2.on('click', function() {
+    //     STAR_1.addClass('star_icon-activebg');
+    //     STAR_2.addClass('star_icon-activebg');
+    // }) 
+    // STAR_3.on('click', function() {
+    //     STAR_1.addClass('star_icon-activebg');
+    //     STAR_2.addClass('star_icon-activebg');
+    //     STAR_3.addClass('star_icon-activebg');
+    // }) 
+    // STAR_4.on('click', function() {
+    //     STAR_1.addClass('star_icon-activebg');
+    //     STAR_2.addClass('star_icon-activebg');
+    //     STAR_3.addClass('star_icon-activebg');
+    //     STAR_4.addClass('star_icon-activebg');
+    // }) 
+    // STAR_5.on('click', function() {
+    //     STAR_1.addClass('star_icon-activebg');
+    //     STAR_2.addClass('star_icon-activebg');
+    //     STAR_3.addClass('star_icon-activebg');
+    //     STAR_4.addClass('star_icon-activebg');
+    //     STAR_5.addClass('star_icon-activebg');
+    // }) 
 
-    // анімація star rating - hover
-    STAR_1.mouseover(function() {
-        STAR_1.addClass('star_icon-active')
-    }) 
-    STAR_1.mouseout(function() {
-        STAR_1.removeClass('star_icon-active')
-    })
-
-    STAR_2.mouseover(function() {
-        STAR_1.addClass('star_icon-active');
-        STAR_2.addClass('star_icon-active')
-    }) 
-    STAR_2.mouseout(function() {
-        STAR_1.removeClass('star_icon-active');
-        STAR_2.removeClass('star_icon-active');
-    })
-
-    STAR_3.mouseover(function() {
-        STAR_1.addClass('star_icon-active');
-        STAR_2.addClass('star_icon-active');
-        STAR_3.addClass('star_icon-active');
-    }) 
-    STAR_3.mouseout(function() {
-        STAR_1.removeClass('star_icon-active');
-        STAR_2.removeClass('star_icon-active');
-        STAR_3.removeClass('star_icon-active');
-    })
-
-    STAR_4.mouseover(function() {
-        STAR_1.addClass('star_icon-active');
-        STAR_2.addClass('star_icon-active');
-        STAR_3.addClass('star_icon-active');
-        STAR_4.addClass('star_icon-active');
-    }) 
-    STAR_4.mouseout(function() {
-        STAR_1.removeClass('star_icon-active');
-        STAR_2.removeClass('star_icon-active');
-        STAR_3.removeClass('star_icon-active');
-        STAR_4.removeClass('star_icon-active');
-    })
-
-    STAR_5.mouseover(function() {
-        STAR_1.addClass('star_icon-active');
-        STAR_2.addClass('star_icon-active');
-        STAR_3.addClass('star_icon-active');
-        STAR_4.addClass('star_icon-active');
-        STAR_5.addClass('star_icon-active');
-    }) 
-    STAR_5.mouseout(function() {
-        STAR_1.removeClass('star_icon-active');
-        STAR_2.removeClass('star_icon-active');
-        STAR_3.removeClass('star_icon-active');
-        STAR_4.removeClass('star_icon-active');
-        STAR_5.removeClass('star_icon-active');
-    })
-
-    
     
 });
 

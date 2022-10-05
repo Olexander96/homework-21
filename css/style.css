@@ -113,16 +113,16 @@ section {
     margin-right: 10px;
 }
 
-.star_icon1, .star_icon2, .star_icon3, .star_icon4, .star_icon5 {
+.star_icon {
     width: 20px;
     height: 20px;
     fill: #8D91A3;
 }
-
-.star_icon-active {
+.star_icon:hover {
     fill: #FFDD3F;
 }
-.star_icon-activebg {
+
+.star_icon-active {
     fill: #FFDD3F;
 }
 
