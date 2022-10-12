@@ -36,54 +36,15 @@ $( document ).ready(function() {
         $(this).removeClass('link_text-active')
     })
 
-    //анімація star rating - click(спроба зробити через цикл)
+    //анімація stars 
 
-    const STARS = $('.star_icon');
-
-    STARS.each(function() {
-        $(this).on('click', function() {
-            for(let i = 0; i <= $(this).index(); i++) {
-                STARS.eq(i).addClass('star_icon-active');
-            }
-        })
+    const STARS = $('.star');
+    STARS.on('click', function () {
+        $(this).siblings().removeClass('star--active');
+        $(this).addClass('star--active');
+        $(this).prevAll().addClass('star--active');
     })
      
-
-    //анімація star rating - click
-    // const STAR_1 = $('.star_icon1');
-    // const STAR_2 = $('.star_icon2');
-    // const STAR_3 = $('.star_icon3');
-    // const STAR_4 = $('.star_icon4');
-    // const STAR_5 = $('.star_icon5');
-    
-    // STAR_1.on('click', function() {
-    //     STAR_1.addClass('star_icon-activebg');
-    // }) 
-
-    // STAR_2.on('click', function() {
-    //     STAR_1.addClass('star_icon-activebg');
-    //     STAR_2.addClass('star_icon-activebg');
-    // }) 
-    // STAR_3.on('click', function() {
-    //     STAR_1.addClass('star_icon-activebg');
-    //     STAR_2.addClass('star_icon-activebg');
-    //     STAR_3.addClass('star_icon-activebg');
-    // }) 
-    // STAR_4.on('click', function() {
-    //     STAR_1.addClass('star_icon-activebg');
-    //     STAR_2.addClass('star_icon-activebg');
-    //     STAR_3.addClass('star_icon-activebg');
-    //     STAR_4.addClass('star_icon-activebg');
-    // }) 
-    // STAR_5.on('click', function() {
-    //     STAR_1.addClass('star_icon-activebg');
-    //     STAR_2.addClass('star_icon-activebg');
-    //     STAR_3.addClass('star_icon-activebg');
-    //     STAR_4.addClass('star_icon-activebg');
-    //     STAR_5.addClass('star_icon-activebg');
-    // }) 
-
-    
 });
 
 
