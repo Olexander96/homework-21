@@ -39,12 +39,22 @@ $( document ).ready(function() {
     //анімація stars 
 
     const STARS = $('.star');
-    STARS.on('click', function () {
-        $(this).siblings().removeClass('star--active');
-        $(this).addClass('star--active');
-        $(this).prevAll().addClass('star--active');
+
+    STARS.on('mouseover', function () {
+        $(this).addClass('star--active-mouse');
+        $(this).prevAll().addClass('star--active-mouse');
     })
-     
+    STARS.on('mouseout', function () {
+        $(this).removeClass('star--active-mouse');
+        $(this).prevAll().removeClass('star--active-mouse');
+    })
+
+    STARS.on('click', function () {
+        $(this).toggleClass('star--active');
+        $(this).prevAll().toggleClass('star--active');
+    })
+
+    
 });
 
 

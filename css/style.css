@@ -121,6 +121,9 @@ section {
 .star_icon:hover {
     fill: #FFDD3F;
 }
+.star--active-mouse svg {
+    fill: #FFDD3F;
+}
 
 .star--active svg {
     fill: #FFDD3F;
