@@ -48,6 +48,7 @@ $( document ).ready(function() {
     })
 
     STARS.on('click', function () {
+        $(this).siblings().removeClass('star--active');
         $(this).toggleClass('star--active');
         $(this).prevAll().toggleClass('star--active');
     })
